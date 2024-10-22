@@ -9,7 +9,17 @@ def encode(password): #Takes user password and encodes it by adding three to eac
     return new_password
 
 def decode(password):
-    pass
+    decoded_password = ''
+    for item in password:
+        if 0 <= int(item) <= 6:
+            decoded_password += str(int(item) - 3)
+        elif item == '0':
+            decoded_password += '7'
+        elif item == '1':
+            decoded_password += '8'
+        elif item == '2':
+            decoded_password += '9'
+    return decoded_password
 
 if __name__ == '__main__':
     while True:
