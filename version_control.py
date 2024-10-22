@@ -11,7 +11,7 @@ def encode(password): #Takes user password and encodes it by adding three to eac
 def decode(password):
     decoded_password = ''
     for item in password:
-        if 0 <= int(item) <= 6:
+        if 3 <= int(item) <= 9:
             decoded_password += str(int(item) - 3)
         elif item == '0':
             decoded_password += '7'
