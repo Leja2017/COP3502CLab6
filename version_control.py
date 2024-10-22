@@ -3,7 +3,7 @@ def encode(password): #Takes user password and encodes it by adding three to eac
     new_password = ""
     for digit in password:
         if int(digit) >= 7:
-            new_password += str((int(digit) % 7 + 3) - 10)
+            new_password += str((int(digit) + 3) - 10)
         else:
             new_password += str(int(digit) + 3)
     return new_password
@@ -22,7 +22,7 @@ def decode(password):
     return decoded_password
 
 if __name__ == '__main__':
-    while True:
+    while True: #Prints and executes menu until user chooses to exit.
         print("Menu")
         print("-------------")
         print("1. Encode")
